@@ -34,3 +34,8 @@ spring:
   jpa.properties.hibernate.format_sql: false
   jackson.default-property-inclusion: NON_NULL
   datasource.validationQuery: SELECT 1
+
+  mybatis:
+    config-location: classpath:config/mybatis-config.xml
+    mapper-locations:
+      - mapper/**/*.xml

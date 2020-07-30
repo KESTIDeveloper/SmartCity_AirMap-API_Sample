@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="co.kesti.api.apimybatis.alarm.mapper.TbSvcTtPblsTxnMapper">
+    <!-- 회원 정보 조회 -->
+    <select id="selectTbSvcTtPbisTxn" resultType="co.kesti.api.apimybatis.alarm.vo.TbSvcTtPblsTxnVo">
+        SELECT /* TbSvcTtPbisTxnMapper.selectTbSvcTtPbisTxn */
+               tt_no                          /* TT 번호 */
+             , airm_seq                       /* 알람 일련번호 */
+             , tt_msg_sbst                    /* TT 메시지 내용 */
+             , tt_pbls_dt                     /* TT 발행 일시  */
+          FROM tb_svc_tt_pbls_txn /* TT 발행 내역 TABLE */
+         WHERE tt_no = #{ttId}
+    </select>
+
+</mapper>
